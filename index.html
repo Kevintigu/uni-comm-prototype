@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampusConnect Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>CampusConnect</h1>
+      <div class="topbar-right">
+        <span id="authBadge">Guest</span>
+        <button class="btn" id="logoutBtn">Logout</button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="sidebar">
+        <nav class="menu" id="menu"></nav>
+      </aside>
+
+      <section class="content" id="content"></section>
+    </main>
+
+    <template id="authTpl">
+      <div class="card auth-wrap">
+        <h2>Welcome to CampusConnect</h2>
+        <p>University assignment communication platform prototype (frontend only)</p>
+        <div class="auth-tabs">
+          <button class="btn active" data-auth="login">Login</button>
+          <button class="btn" data-auth="register">Register</button>
+        </div>
+        <form id="authForm" class="form-grid">
+          <label>Username<input name="username" required placeholder="e.g. alice" /></label>
+          <label>Password<input name="password" type="password" required placeholder="••••••" /></label>
+          <label class="register-only hidden">Email<input name="email" type="email" placeholder="alice@uni.edu" /></label>
+          <button class="btn primary" type="submit">Continue</button>
+        </form>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
